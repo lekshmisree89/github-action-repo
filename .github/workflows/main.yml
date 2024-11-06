@@ -10,7 +10,7 @@ on:
     branches:
       - develop
       - staging
-
+      - main
 # Jobs to carry out
 jobs:
   test:
@@ -27,6 +27,7 @@ jobs:
 
       - name: Use Node.js 21.x
         uses: actions/setup-node@v1
+    
         with:
           node-version: 21.x
 
