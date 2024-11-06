@@ -2,7 +2,7 @@ interface AdvertisementProps {
   companyName: string;
   productDescription: string;
   price: string;
-}
+};
 
 function Advertisement(props: AdvertisementProps) {
   return (
@@ -12,6 +12,6 @@ function Advertisement(props: AdvertisementProps) {
       <p>{props.price}</p>
     </div>
   );
-}
+};
 
 export default Advertisement;
