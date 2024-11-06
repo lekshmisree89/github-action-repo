@@ -16,3 +16,4 @@ module.exports = {
     ],
   },
 }
+//eslint checks for common errors in JavaScript code

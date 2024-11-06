@@ -1,7 +1,10 @@
+# Name of workflow entire workflow,eslint in pacakge.json,we ahve a lint script lso
 # Name of workflow
-name: Lint workflow
+name: Lint workflow 
+# Trigger workflow on all pull requests
 
 # Trigger workflow on all pull requests
+#if a pull regq is made then this workflow will run
 on:
   pull_request:
     branches:
@@ -16,6 +19,8 @@ jobs:
 
     # Steps in job
     steps:
+    #steps with dashes means that it is a list of steps like an array
+    
       # Get code from repo
       - name: Checkout code
         uses: actions/checkout@v1
@@ -32,3 +37,4 @@ jobs:
       # Run lint
       - name: Run Lint
         run: npm run lint
+        #lint is a script in package.json
