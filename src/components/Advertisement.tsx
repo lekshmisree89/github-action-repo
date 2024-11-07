@@ -10,8 +10,9 @@ function Advertisement(props: AdvertisementProps) {
       <p>{props.companyName}</p>
       <p>{props.productDescription}</p>
       <p>{props.price}</p>
+    
     </div>
-  )
+  );
 }
 
 export default Advertisement;
