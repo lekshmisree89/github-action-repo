@@ -1,16 +1,13 @@
-# Name of workflow entire workflow,eslint in pacakge.json,we ahve a lint script lso
 # Name of workflow
-name: Lint workflow 
-# Trigger workflow on all pull requests
+name: Lint workflow
 
 # Trigger workflow on all pull requests
-#if a pull regq is made then this workflow will run
 on:
   pull_request:
     branches:
       - develop
       - staging
-      - main
+
 # Jobs to carry out
 jobs:
   test:
@@ -19,15 +16,12 @@ jobs:
 
     # Steps in job
     steps:
-    #steps with dashes means that it is a list of steps like an array
-    
       # Get code from repo
       - name: Checkout code
         uses: actions/checkout@v1
 
       - name: Use Node.js 21.x
         uses: actions/setup-node@v1
-    
         with:
           node-version: 21.x
 
@@ -38,4 +32,4 @@ jobs:
       # Run lint
       - name: Run Lint
         run: npm run lint
-        #lint is a script in package.json
+ 
